@@ -1,0 +1,19 @@
+node:
+  data: ${NODE_DATA}
+  master: ${NODE_MASTER}
+  name: ${NODE_NAME}
+
+network.host: 0.0.0.0
+
+path:
+  data: /data/data
+
+cloud:
+  kubernetes:
+    service: ${SERVICE}
+    namespace: ${KUBERNETES_NAMESPACE}
+
+discovery:
+  zen:
+    hosts_provider: kubernetes
+    minimum_master_nodes: ${MINIMUM_MASTER_NODES}
